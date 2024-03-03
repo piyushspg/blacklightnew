@@ -1,0 +1,29 @@
+{
+  "name": "black_light",
+  "version": "1.0.0",
+  "description": "A cool project using node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyushspg/black_light.git"
+  },
+  "keywords": [
+    "black_light"
+  ],
+  "author": "piyush",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piyushspg/black_light/issues"
+  },
+  "homepage": "https://github.com/piyushspg/black_light#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "mysql": "^2.18.1",
+    "express": "^4.17.1",
+    "dotenv": "^16.4.5"
+  }
+}

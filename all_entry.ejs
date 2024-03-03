@@ -1,0 +1,74 @@
+<!-- all_entry.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <style>
+        body {
+            background-color: #aaf0ed; 
+        }
+        h1 {
+            color: navy; 
+            font-size: 2em; 
+            text-align: center; 
+            font-weight: bold; /* Bold text */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+            padding: 10px; /* Add padding for better visibility */
+            display: inline-block; 
+            background-color: lightblue;
+            border-radius: 10px; 
+        }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center><h1>Leaderboard</h1></center>
+    <table>
+        <tr>
+            <th>uid</th>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Country</th>
+            <th>Timestamp</th>
+        </tr>
+        <% if (leaderboard && leaderboard.length > 0) { %>
+            <% leaderboard.forEach(entry => { %>
+                <tr>
+                    <td><%= entry.UID %></td>
+                    <td><%= entry.Name %></td>
+                    <td><%= entry.Score %></td>
+                    <td><%= entry.Country %></td>
+                    <td><%= entry.TimeStamp %></td>
+                </tr>
+            <% }); %>
+        <% } else { %>
+            <tr>
+                <td colspan="4">No entries available.</td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+
+</html>

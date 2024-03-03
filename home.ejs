@@ -1,0 +1,82 @@
+<!-- home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            background-color: #aaf0ed;
+            text-align: center; 
+        }
+        h1 {
+            color: navy; 
+            font-size: 2em; 
+            text-align: center; 
+            font-weight: bold; 
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+            padding: 10px; 
+            display: inline-block; 
+            background-color: lightblue;
+            border-radius: 10px; 
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333; 
+            font-weight: bold; 
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #3498db; /* Default background color */
+            color: #fff; /* Default text color */
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9; 
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3em; 
+            }
+        }
+        </style>
+    <title>Home</title>
+</head>
+
+<body>
+    <center><h1>Welcome to the Home Page</h1></center>
+
+    <button><a href="/question1"> task 1 -> View Top 200 for Current Week</a></button><br><br><br>
+    
+    <form action="/question2" method="GET">
+        <label for="country">task 2 -> Enter Country Code:</label>
+        <input type="text" id="country" name="country" placeholder="e.g., US" required>
+        <button type="submit">View Top 200 for Last Week</button>
+    </form>
+    <br><br><br>
+    <form action="/user_rank" method="GET">
+        <label for="uid">task 3 -> Enter UID:</label>
+        <input type="text" id="uid" name="uid" required>
+        <button type="submit">Get User Rank</button>
+    </form>
+    <br>
+    <p>User Rank: <%= userRank %></p><br><br><br>
+
+    <button><a href="/all_entry">View All Entries</a></button><br><br><br>
+</body>
+
+</html>
